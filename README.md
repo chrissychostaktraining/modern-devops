@@ -4,9 +4,6 @@
 CDK 
 SDK 
 
-## Configuration Management 
-Ansible 
-
 ## CI - Continuous integration 
 Git 
 Git Servers - Gitlab, Github, CodeCommit 
