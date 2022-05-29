@@ -4,6 +4,9 @@
 CDK 
 SDK 
 
+## Configuration Management
+Docker
+
 ## CI - Continuous integration 
 Git 
 Git Servers - Gitlab, Github, CodeCommit 
@@ -19,7 +22,6 @@ Github Actions
 CodeBuild 
 
 ## CD - Continuous Delivery 
-Docker 
 Hadolint 
 GitOps 
 Slack integration 
