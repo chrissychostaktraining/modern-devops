@@ -41,11 +41,6 @@ Docker Swarm
 ECS 
 EKS 
  
-## Configuration Management 
-Helm 
-Packer 
-Kaniko 
- 
 ## Observability and Traceability 
 Prometheus 
 Influx 

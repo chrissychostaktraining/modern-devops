@@ -14,3 +14,12 @@ https://docs.gitlab.com/ee/install/docker.html
 # High-level overview
 
 https://www.opsmx.com/blog/wp-content/uploads/2021/02/CICD-Pipeline-e1613664546213.png
+
+# Runners
+
+https://docs.gitlab.com/runner/
+
+# SonarQube
+
+https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2019/01/SQProject_thumb1.png
+
