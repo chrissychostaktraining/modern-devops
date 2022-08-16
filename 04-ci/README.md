@@ -23,3 +23,18 @@ https://docs.gitlab.com/runner/
 
 https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2019/01/SQProject_thumb1.png
 
+# Dind
+
+https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker
+
+# Gitlab CI Variables
+
+https://docs.gitlab.com/ee/ci/variables/
+
+# Bind docker daemon to tcp host/port
+
+https://docs.docker.com/engine/reference/commandline/dockerd/#bind-docker-to-another-hostport-or-a-unix-socket
+
+# Protect docker daemon socket
+
+https://docs.docker.com/engine/security/protect-access/
