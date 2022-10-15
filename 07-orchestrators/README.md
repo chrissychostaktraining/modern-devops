@@ -29,3 +29,15 @@ minikube config set driver virtualbox
 minikube stop -p modern-devops
 minikube start -p modern-devops
 ```
+
+# Eksctl
+
+https://eksctl.io/
+https://eksctl.io/usage/schema/
+
+```console
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+eksctl create cluster -f cluster.yaml
+aws eks update-kubeconfig --name modern-devops
+```
