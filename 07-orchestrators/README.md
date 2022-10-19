@@ -41,3 +41,10 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl create cluster -f cluster.yaml
 aws eks update-kubeconfig --name modern-devops
 ```
+
+# ECS
+
+https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/05/08/image-13.png
+
+# GitOps
+
