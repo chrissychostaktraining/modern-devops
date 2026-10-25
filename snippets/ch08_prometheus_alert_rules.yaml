@@ -1,0 +1,23 @@
+# Ch 8: Prometheus Scrape & Golden Signal Alert Rules
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "kubernetes-microservices"
+    static_configs:
+      - targets: ["checkout-api.production:8080"]
+
+groups:
+  - name: checkout-golden-signals
+    rules:
+      - alert: HighCheckoutErrorRate
+        expr: >
+          sum(rate(http_requests_total{status=~"5.."}[5m]))
+          /
+          sum(rate(http_requests_total[5m])) > 0.01
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Checkout 5xx rate exceeded 1%"

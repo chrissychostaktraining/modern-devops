@@ -1,0 +1,43 @@
+# Ch 20: Cilium eBPF Layer-7 HTTP & DNS NetworkPolicy
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: checkout-zero-trust-l7
+  namespace: team-payments
+spec:
+  endpointSelector:
+    matchLabels:
+      app: checkout-service
+      tier: backend
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app: api-gateway
+      toPorts:
+        - ports:
+            - port: "8080"
+              protocol: TCP
+          rules:
+            http:
+              - method: "POST"
+                path: "/api/v1/checkout"
+              - method: "GET"
+                path: "/healthz"
+  egress:
+    - toEndpoints:
+        - matchLabels:
+            k8s:io.kubernetes.pod.namespace: kube-system
+            k8s-app: kube-dns
+      toPorts:
+        - ports:
+            - port: "53"
+              protocol: ANY
+          rules:
+            dns:
+              - matchPattern: "*.stripe.com"
+    - toFQDNs:
+        - matchPattern: "api.stripe.com"
+      toPorts:
+        - ports:
+            - port: "443"
+              protocol: TCP

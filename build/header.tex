@@ -1,0 +1,22 @@
+% Allow looser line breaking to reduce overfull boxes in 6x9 KDP trim
+\sloppy
+\setlength{\emergencystretch}{10em}
+% KDP Widow and Orphan control (prevent single stranded lines at page top/bottom)
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+% Adjust tables to avoid overflow without micro fonts
+\usepackage{array}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.05}
+\AtBeginEnvironment{longtable}{\small\raggedright\arraybackslash}
+% Make urls breakable
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{url}
+\usepackage{hyperref}
+\tolerance=15000
+\emergencystretch=10em
+% Use monospaced font for code blocks to avoid overflow and allow breaks
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\setlength{\parindent}{0pt}

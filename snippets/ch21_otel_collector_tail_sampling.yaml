@@ -1,0 +1,68 @@
+# Ch 21: OpenTelemetry Collector Gateway Configuration
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_percentage: 80
+    spike_limit_percentage: 15
+
+  k8sattributes:
+    auth_type: "serviceAccount"
+    extract:
+      metadata:
+        - k8s.namespace.name
+        - k8s.deployment.name
+        - k8s.pod.name
+
+  attributes/redact_pii:
+    actions:
+      - key: http.request.header.authorization
+        action: delete
+      - key: db.statement
+        action: hash
+
+  tail_sampling:
+    decision_wait: 10s
+    num_traces: 50000
+    policies:
+      - name: keep-all-errors
+        type: status_code
+        status_code:
+          status_codes: [ERROR]
+      - name: keep-high-latency-p99
+        type: latency
+        latency:
+          threshold_ms: 850
+      - name: baseline-probabilistic-sample
+        type: probabilistic
+        probabilistic:
+          sampling_percentage: 5.0
+
+  batch:
+    send_batch_size: 2048
+    timeout: 2s
+
+exporters:
+  otlp/tempo:
+    endpoint: tempo.observability:4317
+    tls:
+      insecure: false
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors:
+        - memory_limiter
+        - k8sattributes
+        - attributes/redact_pii
+        - tail_sampling
+        - batch
+      exporters: [otlp/tempo]

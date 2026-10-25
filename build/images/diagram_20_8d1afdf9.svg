@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718 228" width="100%" style="max-width:718px;height:auto;display:block;margin:1.25rem auto;background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;" role="img" aria-label="Figure 20: Architecture &amp; Workflow Diagram">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1.5 L 9.5 5 L 0 8.5 z" fill="#334155"/>
+  </marker>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="116%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.08"/>
+  </filter>
+</defs>
+<path d="M 218.0 57.0 C 240.5 57.0, 240.5 57.0, 263.0 57.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 452.0 57.0 C 474.5 57.0, 474.5 57.0, 497.0 57.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 593.0 86.0 C 593.0 112.5, 593.0 112.5, 593.0 139.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 500.0 171.0 C 477.5 171.0, 477.5 171.0, 455.0 171.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="32.0" y="28.0" width="186.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="32.0" y="28.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="127.0" y="54.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Schedule / Event /</text>
+<text x="127.0" y="69.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">ChatOps Trigger</text>
+<rect x="266.0" y="28.0" width="186.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="266.0" y="28.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="361.0" y="54.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Apache Airflow DAG</text>
+<text x="361.0" y="69.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Orchestrator</text>
+<rect x="500.0" y="28.0" width="186.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="500.0" y="28.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="595.0" y="54.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Ansible Automation</text>
+<text x="595.0" y="69.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Controller (RBAC)</text>
+<rect x="500.0" y="142.0" width="186.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="500.0" y="142.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="595.0" y="168.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Rundeck Self-Service</text>
+<text x="595.0" y="183.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Runbooks</text>
+<rect x="266.0" y="142.0" width="186.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="266.0" y="142.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="361.0" y="168.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Multi-Cloud &amp; Hybrid</text>
+<text x="361.0" y="183.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Targets</text>
+</svg>

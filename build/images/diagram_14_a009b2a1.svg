@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 608" width="100%" style="max-width:520px;height:auto;display:block;margin:1.25rem auto;background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;" role="img" aria-label="Figure 14: Architecture &amp; Workflow Diagram">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1.5 L 9.5 5 L 0 8.5 z" fill="#334155"/>
+  </marker>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="116%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.08"/>
+  </filter>
+</defs>
+<path d="M 260.0 82.0 C 260.0 102.5, 260.0 102.5, 260.0 123.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 260.0 182.0 C 260.0 202.5, 260.0 202.5, 260.0 223.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 260.0 282.0 C 260.0 302.5, 260.0 302.5, 260.0 323.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 358.0 354.0 C 316.5 354.0, 316.5 454.0, 275.0 454.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 278.0 454.0 C 319.5 454.0, 319.5 354.0, 361.0 354.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 162.0 354.0 C 203.5 354.0, 203.5 454.0, 245.0 454.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 242.0 454.0 C 200.5 454.0, 200.5 554.0, 159.0 554.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="162.0" y="26.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="162.0" y="26.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="262.0" y="51.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">External Client (HTTP/3 &amp;</text>
+<text x="262.0" y="66.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">TLS 1.3)</text>
+<rect x="162.0" y="126.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="162.0" y="126.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="262.0" y="151.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Edge L4/L7 Load Balancer</text>
+<text x="262.0" y="166.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(HAProxy / NLB)</text>
+<rect x="162.0" y="226.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="162.0" y="226.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="262.0" y="251.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Kubernetes Gateway API</text>
+<text x="262.0" y="266.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(Envoy / Kong)</text>
+<rect x="162.0" y="326.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="162.0" y="326.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="262.0" y="351.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Istio Ambient ztunnel</text>
+<text x="262.0" y="366.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(Node L4 mTLS)</text>
+<rect x="46.0" y="426.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="46.0" y="426.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="146.0" y="451.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">L7 Waypoint Proxy (Envoy</text>
+<text x="146.0" y="466.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">HTTP/gRPC)</text>
+<rect x="278.0" y="426.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="278.0" y="426.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="378.0" y="458.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Order Service Pod</text>
+<rect x="162.0" y="526.0" width="196.0" height="56.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="162.0" y="526.0" width="6" height="56.0" rx="3" fill="#1e40af"/>
+<text x="262.0" y="558.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Inventory Service Pod</text>
+</svg>

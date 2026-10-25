@@ -1,0 +1,22 @@
+# Ch 14: Argo CD GitOps Application with Self-Healing
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: checkout-production
+  namespace: argocd
+spec:
+  project: production-platform
+  source:
+    repoURL: https://github.com/acme/gitops-fleet.git
+    targetRevision: main
+    path: environments/production/checkout
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true

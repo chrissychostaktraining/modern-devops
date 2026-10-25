@@ -1,0 +1,45 @@
+# Ch 22: Kyverno Policy for Cosign & SLSA Provenance
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: enforce-sigstore-and-slsa-provenance
+spec:
+  validationFailureAction: Enforce
+  background: false
+  webhookTimeoutSeconds: 15
+  rules:
+    - name: verify-keyless-signature-and-slsa
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - "team-*"
+                - "production"
+      verifyImages:
+        - imageReferences:
+            - "ghcr.io/acme/*"
+          mutateDigest: true
+          verifyDigest: true
+          required: true
+          attestors:
+            - count: 1
+              entries:
+                - keyless:
+                    issuer: >-
+                      https://token.actions.githubusercontent.com
+                    subjectRegExp: >-
+                      https://github.com/acme/.+
+                    rekor:
+                      url: https://rekor.sigstore.dev
+          attestations:
+            - type: https://slsa.dev/provenance/v1
+              attestors:
+                - count: 1
+                  entries:
+                    - keyless:
+                        issuer: >-
+                          https://token.actions.githubusercontent.com
+                        subjectRegExp: >-
+                          https://github.com/acme/.+

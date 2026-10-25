@@ -1,0 +1,56 @@
+# Ch 7: Hardened Kubernetes Deployment & Service
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkout-api-blue
+  namespace: production
+  labels:
+    app: checkout-api
+    slot: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: checkout-api
+      slot: blue
+  template:
+    metadata:
+      labels:
+        app: checkout-api
+        slot: blue
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+      containers:
+        - name: checkout-api
+          image: ghcr.io/acme/checkout:v2.4.0
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: checkout-api-svc
+  namespace: production
+spec:
+  selector:
+    app: checkout-api
+    slot: blue
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

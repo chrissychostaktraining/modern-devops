@@ -1,0 +1,66 @@
+{
+  "manifestVersion": "1.0",
+  "generatedAt": "2026-10-25T09:12:16Z",
+  "bookMetadata": {
+    "title": "Mastering Modern DevOps (Second Edition)",
+    "subtitle": "A Comprehensive Guide to Infrastructure, Automation, Platform Engineering, eBPF, OpenTelemetry, and Cloud-Native Security",
+    "technicalDomain": "Platform Engineering",
+    "totalWordCount": 71851,
+    "author": "Christian Chostak",
+    "edition": "Second Edition (v2.0)"
+  },
+  "kdpPrintSpecifications": {
+    "trim_size": "7.00 x 10.00 inches",
+    "paper_width": "6in",
+    "paper_height": "9in",
+    "estimated_page_count": 364,
+    "page_count_bracket": "301-500",
+    "min_gutter_margin": "0.5in",
+    "recommended_gutter_margin": "0.825in",
+    "outer_margin": "0.75in",
+    "top_margin": "0.75in",
+    "bottom_margin": "0.75in",
+    "paper_type": "white",
+    "spine_width_inches": 0.8197,
+    "spine_width_white_paper_inches": 0.8197,
+    "spine_width_cream_paper_inches": 0.685,
+    "spine_text_allowed": true,
+    "recommended_max_code_columns": 55,
+    "latex_geometry": "paperwidth=6in,paperheight=9in,twoside,inner=0.825in,outer=0.75in,top=0.75in,bottom=0.75in",
+    "actual_pdf_page_count": 364,
+    "paperback_wraparound_width_inches": 15.0697,
+    "paperback_wraparound_height_inches": 10.25,
+    "hardcover_case_laminate_spine_inches": 1.0087,
+    "hardcover_wraparound_width_inches": 16.9787,
+    "hardcover_wraparound_height_inches": 11.417
+  },
+  "kdpKindleEbookSpecifications": {
+    "format": "EPUB3 Reflowable (KDP Kindle Previewer Compatible)",
+    "tableHandling": "Wide pipe tables transformed to structured bullet lists",
+    "codeLineWrapping": "Wrapped to 55 columns",
+    "navigation": "HTML5/EPUB3 NCX & landmarks Table of Contents enabled"
+  },
+  "bisacCategories": [
+    "COM051230 - COMPUTERS / Software Development & Engineering / General",
+    "COM051440 - COMPUTERS / Software Development & Engineering / Systems Analysis & Design",
+    "COM051010 - COMPUTERS / Programming / General"
+  ],
+  "kdpBackendKeywords": [
+    "software architecture",
+    "technical book manuscript handbook",
+    "production engineering best practices",
+    "hands-on code architecture guide",
+    "cloud security devsecops patterns",
+    "software systems design tutorial",
+    "executable polyglot code examples"
+  ],
+  "kdpReadinessChecklist": {
+    "minimumPageCountMet": true,
+    "maximumPageCountWithinLimit": true,
+    "gutterMarginCompliant": true,
+    "codeLinesWrappedForPrint": true,
+    "wideTablesTransformedToLists": true,
+    "widowAndOrphanControlEnabled": true,
+    "frontMatterIncluded": true
+  }
+}

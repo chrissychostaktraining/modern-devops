@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 204" width="100%" style="max-width:842px;height:auto;display:block;margin:1.25rem auto;background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;" role="img" aria-label="Figure 13: Architecture &amp; Workflow Diagram">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1.5 L 9.5 5 L 0 8.5 z" fill="#334155"/>
+  </marker>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="116%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.08"/>
+  </filter>
+</defs>
+<path d="M 190.0 57.0 C 211.5 57.0, 211.5 102.0, 233.0 102.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 398.0 102.0 C 419.5 102.0, 419.5 102.0, 441.0 102.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 606.0 102.0 C 627.5 102.0, 627.5 102.0, 649.0 102.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 190.0 147.0 C 211.5 147.0, 211.5 102.0, 233.0 102.0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28.0" y="28.0" width="162.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="28.0" y="28.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="111.0" y="54.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Git Commit (Gitleaks</text>
+<text x="111.0" y="69.0" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">+ Trivy/Grype Scan)</text>
+<rect x="28.0" y="118.0" width="162.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="28.0" y="118.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="111.0" y="136.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Identity Federation</text>
+<text x="111.0" y="151.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(Keycloak / Cognito</text>
+<text x="111.0" y="166.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">OIDC)</text>
+<rect x="236.0" y="73.0" width="162.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="236.0" y="73.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="319.0" y="91.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">K8s Admission Gate</text>
+<text x="319.0" y="106.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(CEL / Kyverno /</text>
+<text x="319.0" y="121.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">OPA)</text>
+<rect x="444.0" y="73.0" width="162.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="444.0" y="73.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="527.0" y="91.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Dynamic Secrets</text>
+<text x="527.0" y="106.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">(Vault / OpenBao +</text>
+<text x="527.0" y="121.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">AWS SM)</text>
+<rect x="652.0" y="73.0" width="162.0" height="58.0" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.6" filter="url(#card-shadow)"/>
+<rect x="652.0" y="73.0" width="6" height="58.0" rx="3" fill="#1e40af"/>
+<text x="735.0" y="91.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Linux Kernel eBPF</text>
+<text x="735.0" y="106.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Runtime (Falco</text>
+<text x="735.0" y="121.5" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Threat Engine)</text>
+</svg>

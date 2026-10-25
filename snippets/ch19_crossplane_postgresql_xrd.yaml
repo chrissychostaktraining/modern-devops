@@ -1,0 +1,37 @@
+# Ch 19: Crossplane XRD & PostgreSQL Claim
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xpostgresqlinstances.platform.acme.io
+spec:
+  group: platform.acme.io
+  names:
+    kind: XPostgreSQLInstance
+    plural: xpostgresqlinstances
+  claimNames:
+    kind: PostgreSQLInstance
+    plural: postgresqlinstances
+  versions:
+    - name: v1alpha1
+      served: true
+      referenceable: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                parameters:
+                  type: object
+                  required:
+                    - storageGB
+                    - tier
+                  properties:
+                    storageGB:
+                      type: integer
+                      minimum: 20
+                      maximum: 1000
+                    tier:
+                      type: string
+                      enum: ["dev", "staging", "prod"]
